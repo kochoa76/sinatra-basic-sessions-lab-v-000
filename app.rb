@@ -4,7 +4,7 @@ class App < Sinatra::Base
 
   configure do
     enable :sessions
-    @sessions = session_secret, "secret"
+    set :session_secret, 'flatiron'
   end
 
   get '/' do
@@ -14,7 +14,7 @@ class App < Sinatra::Base
   post '/checkout' do
     @sessions << params[:item]
     erb :index
-  end 
+  end
 
 
 end
