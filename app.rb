@@ -6,4 +6,4 @@ class App < Sinatra::Base
     enable :sessions
     @sessions = session_secret, "secret"
   end
-end 
+end
